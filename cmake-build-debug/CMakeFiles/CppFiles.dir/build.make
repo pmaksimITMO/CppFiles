@@ -65,28 +65,28 @@ include CMakeFiles/CppFiles.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/CppFiles.dir/flags.make
 
-CMakeFiles/CppFiles.dir/Yandex_trainings_3.0/Beautiful_String.cpp.obj: CMakeFiles/CppFiles.dir/flags.make
-CMakeFiles/CppFiles.dir/Yandex_trainings_3.0/Beautiful_String.cpp.obj: CMakeFiles/CppFiles.dir/includes_CXX.rsp
-CMakeFiles/CppFiles.dir/Yandex_trainings_3.0/Beautiful_String.cpp.obj: ../Yandex\ trainings\ 3.0/Beautiful_String.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dns56\CLionProjects\CppFiles\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CppFiles.dir/Yandex_trainings_3.0/Beautiful_String.cpp.obj"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CppFiles.dir\Yandex_trainings_3.0\Beautiful_String.cpp.obj -c "C:\Users\Dns56\CLionProjects\CppFiles\Yandex trainings 3.0\Beautiful_String.cpp"
+CMakeFiles/CppFiles.dir/A&DS/SegTree/PermutationOnSeg.cpp.obj: CMakeFiles/CppFiles.dir/flags.make
+CMakeFiles/CppFiles.dir/A&DS/SegTree/PermutationOnSeg.cpp.obj: CMakeFiles/CppFiles.dir/includes_CXX.rsp
+CMakeFiles/CppFiles.dir/A&DS/SegTree/PermutationOnSeg.cpp.obj: ../A&DS/SegTree/PermutationOnSeg.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dns56\CLionProjects\CppFiles\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CppFiles.dir/A&DS/SegTree/PermutationOnSeg.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o "CMakeFiles\CppFiles.dir\A&DS\SegTree\PermutationOnSeg.cpp.obj" -c "C:\Users\Dns56\CLionProjects\CppFiles\A&DS\SegTree\PermutationOnSeg.cpp"
 
-CMakeFiles/CppFiles.dir/Yandex_trainings_3.0/Beautiful_String.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CppFiles.dir/Yandex_trainings_3.0/Beautiful_String.cpp.i"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Dns56\CLionProjects\CppFiles\Yandex trainings 3.0\Beautiful_String.cpp" > CMakeFiles\CppFiles.dir\Yandex_trainings_3.0\Beautiful_String.cpp.i
+CMakeFiles/CppFiles.dir/A&DS/SegTree/PermutationOnSeg.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CppFiles.dir/A&DS/SegTree/PermutationOnSeg.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Dns56\CLionProjects\CppFiles\A&DS\SegTree\PermutationOnSeg.cpp" > "CMakeFiles\CppFiles.dir\A&DS\SegTree\PermutationOnSeg.cpp.i"
 
-CMakeFiles/CppFiles.dir/Yandex_trainings_3.0/Beautiful_String.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CppFiles.dir/Yandex_trainings_3.0/Beautiful_String.cpp.s"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Dns56\CLionProjects\CppFiles\Yandex trainings 3.0\Beautiful_String.cpp" -o CMakeFiles\CppFiles.dir\Yandex_trainings_3.0\Beautiful_String.cpp.s
+CMakeFiles/CppFiles.dir/A&DS/SegTree/PermutationOnSeg.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CppFiles.dir/A&DS/SegTree/PermutationOnSeg.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Dns56\CLionProjects\CppFiles\A&DS\SegTree\PermutationOnSeg.cpp" -o "CMakeFiles\CppFiles.dir\A&DS\SegTree\PermutationOnSeg.cpp.s"
 
 # Object files for target CppFiles
 CppFiles_OBJECTS = \
-"CMakeFiles/CppFiles.dir/Yandex_trainings_3.0/Beautiful_String.cpp.obj"
+"CMakeFiles/CppFiles.dir/A&DS/SegTree/PermutationOnSeg.cpp.obj"
 
 # External object files for target CppFiles
 CppFiles_EXTERNAL_OBJECTS =
 
-CppFiles.exe: CMakeFiles/CppFiles.dir/Yandex_trainings_3.0/Beautiful_String.cpp.obj
+CppFiles.exe: CMakeFiles/CppFiles.dir/A&DS/SegTree/PermutationOnSeg.cpp.obj
 CppFiles.exe: CMakeFiles/CppFiles.dir/build.make
 CppFiles.exe: CMakeFiles/CppFiles.dir/linklibs.rsp
 CppFiles.exe: CMakeFiles/CppFiles.dir/objects1.rsp

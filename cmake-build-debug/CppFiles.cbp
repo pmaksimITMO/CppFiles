@@ -82,7 +82,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Dns56/CLionProjects/CppFiles/Yandex trainings 3.0/Beautiful_String.cpp">
+		<Unit filename="C:/Users/Dns56/CLionProjects/CppFiles/A&amp;DS/SegTree/PermutationOnSeg.cpp">
 			<Option target="CppFiles"/>
 		</Unit>
 		<Unit filename="C:/Users/Dns56/CLionProjects/CppFiles/CMakeLists.txt">

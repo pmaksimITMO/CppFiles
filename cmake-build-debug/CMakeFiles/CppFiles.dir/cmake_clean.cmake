@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/CppFiles.dir/Yandex_trainings_3.0/Beautiful_String.cpp.obj"
+  "CMakeFiles/CppFiles.dir/A&DS/SegTree/PermutationOnSeg.cpp.obj"
   "CppFiles.exe"
   "CppFiles.exe.manifest"
   "CppFiles.pdb"

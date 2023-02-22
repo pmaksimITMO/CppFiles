@@ -128,29 +128,29 @@ CppFiles/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CppFiles.dir\build.make CMakeFiles/CppFiles.dir/build
 .PHONY : CppFiles/fast
 
-Yandex_trainings_3.0/Beautiful_String.obj: Yandex_trainings_3.0/Beautiful_String.cpp.obj
-.PHONY : Yandex_trainings_3.0/Beautiful_String.obj
+A&DS/SegTree/PermutationOnSeg.obj: A&DS/SegTree/PermutationOnSeg.cpp.obj
+.PHONY : A&DS/SegTree/PermutationOnSeg.obj
 
 # target to build an object file
-Yandex_trainings_3.0/Beautiful_String.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CppFiles.dir\build.make CMakeFiles/CppFiles.dir/Yandex_trainings_3.0/Beautiful_String.cpp.obj
-.PHONY : Yandex_trainings_3.0/Beautiful_String.cpp.obj
+A&DS/SegTree/PermutationOnSeg.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CppFiles.dir\build.make "CMakeFiles/CppFiles.dir/A&DS/SegTree/PermutationOnSeg.cpp.obj"
+.PHONY : A&DS/SegTree/PermutationOnSeg.cpp.obj
 
-Yandex_trainings_3.0/Beautiful_String.i: Yandex_trainings_3.0/Beautiful_String.cpp.i
-.PHONY : Yandex_trainings_3.0/Beautiful_String.i
+A&DS/SegTree/PermutationOnSeg.i: A&DS/SegTree/PermutationOnSeg.cpp.i
+.PHONY : A&DS/SegTree/PermutationOnSeg.i
 
 # target to preprocess a source file
-Yandex_trainings_3.0/Beautiful_String.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CppFiles.dir\build.make CMakeFiles/CppFiles.dir/Yandex_trainings_3.0/Beautiful_String.cpp.i
-.PHONY : Yandex_trainings_3.0/Beautiful_String.cpp.i
+A&DS/SegTree/PermutationOnSeg.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CppFiles.dir\build.make "CMakeFiles/CppFiles.dir/A&DS/SegTree/PermutationOnSeg.cpp.i"
+.PHONY : A&DS/SegTree/PermutationOnSeg.cpp.i
 
-Yandex_trainings_3.0/Beautiful_String.s: Yandex_trainings_3.0/Beautiful_String.cpp.s
-.PHONY : Yandex_trainings_3.0/Beautiful_String.s
+A&DS/SegTree/PermutationOnSeg.s: A&DS/SegTree/PermutationOnSeg.cpp.s
+.PHONY : A&DS/SegTree/PermutationOnSeg.s
 
 # target to generate assembly for a file
-Yandex_trainings_3.0/Beautiful_String.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CppFiles.dir\build.make CMakeFiles/CppFiles.dir/Yandex_trainings_3.0/Beautiful_String.cpp.s
-.PHONY : Yandex_trainings_3.0/Beautiful_String.cpp.s
+A&DS/SegTree/PermutationOnSeg.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CppFiles.dir\build.make "CMakeFiles/CppFiles.dir/A&DS/SegTree/PermutationOnSeg.cpp.s"
+.PHONY : A&DS/SegTree/PermutationOnSeg.cpp.s
 
 # Help Target
 help:
@@ -161,9 +161,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... CppFiles
-	@echo ... Yandex_trainings_3.0/Beautiful_String.obj
-	@echo ... Yandex_trainings_3.0/Beautiful_String.i
-	@echo ... Yandex_trainings_3.0/Beautiful_String.s
+	@echo ... A&DS/SegTree/PermutationOnSeg.obj
+	@echo ... A&DS/SegTree/PermutationOnSeg.i
+	@echo ... A&DS/SegTree/PermutationOnSeg.s
 .PHONY : help
 
 

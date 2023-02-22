@@ -11,4 +11,7 @@ add_executable(CppFiles
 #        "evm/cache.cpp"
 #        "LOSH2021/heavy-light decomposition.cpp"
 #        "LOSH2021/suff-mas.cpp"
-        "Yandex trainings 3.0/Beautiful_String.cpp")
+#        "Yandex trainings 3.0/Beautiful_String.cpp"
+#        A&DS/SegTree/RMQ.cpp
+        A&DS/SegTree/PermutationOnSeg.cpp
+        )
