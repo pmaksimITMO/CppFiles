@@ -13,5 +13,10 @@ add_executable(CppFiles
 #        "LOSH2021/suff-mas.cpp"
 #        "Yandex trainings 3.0/Beautiful_String.cpp"
 #        A&DS/SegTree/RMQ.cpp
-        A&DS/SegTree/PermutationOnSeg.cpp
+#        A&DS/SegTree/PermutationOnSeg.cpp
+#        "Yandex trainings 3.0/ContestBackend_A.cpp"
+#        "Yandex trainings 3.0/ContestBackend_B.cpp"
+#        "Yandex trainings 3.0/ContestBackend_C.cpp"
+#        "Yandex trainings 3.0/ContestBackend_D.cpp"
+        "Yandex trainings 3.0/ContestBackend_stupid_solve.cpp"
         )

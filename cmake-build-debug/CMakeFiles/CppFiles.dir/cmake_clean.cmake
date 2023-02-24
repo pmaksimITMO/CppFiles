@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/CppFiles.dir/A&DS/SegTree/PermutationOnSeg.cpp.obj"
+  "CMakeFiles/CppFiles.dir/Yandex_trainings_3.0/ContestBackend_stupid_solve.cpp.obj"
   "CppFiles.exe"
   "CppFiles.exe.manifest"
   "CppFiles.pdb"

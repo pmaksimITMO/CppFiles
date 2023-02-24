@@ -128,29 +128,29 @@ CppFiles/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CppFiles.dir\build.make CMakeFiles/CppFiles.dir/build
 .PHONY : CppFiles/fast
 
-A&DS/SegTree/PermutationOnSeg.obj: A&DS/SegTree/PermutationOnSeg.cpp.obj
-.PHONY : A&DS/SegTree/PermutationOnSeg.obj
+Yandex_trainings_3.0/ContestBackend_stupid_solve.obj: Yandex_trainings_3.0/ContestBackend_stupid_solve.cpp.obj
+.PHONY : Yandex_trainings_3.0/ContestBackend_stupid_solve.obj
 
 # target to build an object file
-A&DS/SegTree/PermutationOnSeg.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CppFiles.dir\build.make "CMakeFiles/CppFiles.dir/A&DS/SegTree/PermutationOnSeg.cpp.obj"
-.PHONY : A&DS/SegTree/PermutationOnSeg.cpp.obj
+Yandex_trainings_3.0/ContestBackend_stupid_solve.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CppFiles.dir\build.make CMakeFiles/CppFiles.dir/Yandex_trainings_3.0/ContestBackend_stupid_solve.cpp.obj
+.PHONY : Yandex_trainings_3.0/ContestBackend_stupid_solve.cpp.obj
 
-A&DS/SegTree/PermutationOnSeg.i: A&DS/SegTree/PermutationOnSeg.cpp.i
-.PHONY : A&DS/SegTree/PermutationOnSeg.i
+Yandex_trainings_3.0/ContestBackend_stupid_solve.i: Yandex_trainings_3.0/ContestBackend_stupid_solve.cpp.i
+.PHONY : Yandex_trainings_3.0/ContestBackend_stupid_solve.i
 
 # target to preprocess a source file
-A&DS/SegTree/PermutationOnSeg.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CppFiles.dir\build.make "CMakeFiles/CppFiles.dir/A&DS/SegTree/PermutationOnSeg.cpp.i"
-.PHONY : A&DS/SegTree/PermutationOnSeg.cpp.i
+Yandex_trainings_3.0/ContestBackend_stupid_solve.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CppFiles.dir\build.make CMakeFiles/CppFiles.dir/Yandex_trainings_3.0/ContestBackend_stupid_solve.cpp.i
+.PHONY : Yandex_trainings_3.0/ContestBackend_stupid_solve.cpp.i
 
-A&DS/SegTree/PermutationOnSeg.s: A&DS/SegTree/PermutationOnSeg.cpp.s
-.PHONY : A&DS/SegTree/PermutationOnSeg.s
+Yandex_trainings_3.0/ContestBackend_stupid_solve.s: Yandex_trainings_3.0/ContestBackend_stupid_solve.cpp.s
+.PHONY : Yandex_trainings_3.0/ContestBackend_stupid_solve.s
 
 # target to generate assembly for a file
-A&DS/SegTree/PermutationOnSeg.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CppFiles.dir\build.make "CMakeFiles/CppFiles.dir/A&DS/SegTree/PermutationOnSeg.cpp.s"
-.PHONY : A&DS/SegTree/PermutationOnSeg.cpp.s
+Yandex_trainings_3.0/ContestBackend_stupid_solve.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CppFiles.dir\build.make CMakeFiles/CppFiles.dir/Yandex_trainings_3.0/ContestBackend_stupid_solve.cpp.s
+.PHONY : Yandex_trainings_3.0/ContestBackend_stupid_solve.cpp.s
 
 # Help Target
 help:
@@ -161,9 +161,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... CppFiles
-	@echo ... A&DS/SegTree/PermutationOnSeg.obj
-	@echo ... A&DS/SegTree/PermutationOnSeg.i
-	@echo ... A&DS/SegTree/PermutationOnSeg.s
+	@echo ... Yandex_trainings_3.0/ContestBackend_stupid_solve.obj
+	@echo ... Yandex_trainings_3.0/ContestBackend_stupid_solve.i
+	@echo ... Yandex_trainings_3.0/ContestBackend_stupid_solve.s
 .PHONY : help
 
 

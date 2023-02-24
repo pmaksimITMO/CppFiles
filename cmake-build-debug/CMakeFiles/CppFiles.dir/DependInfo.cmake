@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Dns56/CLionProjects/CppFiles/A&DS/SegTree/PermutationOnSeg.cpp" "C:/Users/Dns56/CLionProjects/CppFiles/cmake-build-debug/CMakeFiles/CppFiles.dir/A&DS/SegTree/PermutationOnSeg.cpp.obj"
+  "C:/Users/Dns56/CLionProjects/CppFiles/Yandex trainings 3.0/ContestBackend_stupid_solve.cpp" "C:/Users/Dns56/CLionProjects/CppFiles/cmake-build-debug/CMakeFiles/CppFiles.dir/Yandex_trainings_3.0/ContestBackend_stupid_solve.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
