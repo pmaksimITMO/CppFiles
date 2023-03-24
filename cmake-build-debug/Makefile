@@ -128,29 +128,29 @@ CppFiles/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CppFiles.dir\build.make CMakeFiles/CppFiles.dir/build
 .PHONY : CppFiles/fast
 
-Yandex_trainings_3.0/ContestBackend_stupid_solve.obj: Yandex_trainings_3.0/ContestBackend_stupid_solve.cpp.obj
-.PHONY : Yandex_trainings_3.0/ContestBackend_stupid_solve.obj
+CppCourse/substring.obj: CppCourse/substring.cpp.obj
+.PHONY : CppCourse/substring.obj
 
 # target to build an object file
-Yandex_trainings_3.0/ContestBackend_stupid_solve.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CppFiles.dir\build.make CMakeFiles/CppFiles.dir/Yandex_trainings_3.0/ContestBackend_stupid_solve.cpp.obj
-.PHONY : Yandex_trainings_3.0/ContestBackend_stupid_solve.cpp.obj
+CppCourse/substring.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CppFiles.dir\build.make CMakeFiles/CppFiles.dir/CppCourse/substring.cpp.obj
+.PHONY : CppCourse/substring.cpp.obj
 
-Yandex_trainings_3.0/ContestBackend_stupid_solve.i: Yandex_trainings_3.0/ContestBackend_stupid_solve.cpp.i
-.PHONY : Yandex_trainings_3.0/ContestBackend_stupid_solve.i
+CppCourse/substring.i: CppCourse/substring.cpp.i
+.PHONY : CppCourse/substring.i
 
 # target to preprocess a source file
-Yandex_trainings_3.0/ContestBackend_stupid_solve.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CppFiles.dir\build.make CMakeFiles/CppFiles.dir/Yandex_trainings_3.0/ContestBackend_stupid_solve.cpp.i
-.PHONY : Yandex_trainings_3.0/ContestBackend_stupid_solve.cpp.i
+CppCourse/substring.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CppFiles.dir\build.make CMakeFiles/CppFiles.dir/CppCourse/substring.cpp.i
+.PHONY : CppCourse/substring.cpp.i
 
-Yandex_trainings_3.0/ContestBackend_stupid_solve.s: Yandex_trainings_3.0/ContestBackend_stupid_solve.cpp.s
-.PHONY : Yandex_trainings_3.0/ContestBackend_stupid_solve.s
+CppCourse/substring.s: CppCourse/substring.cpp.s
+.PHONY : CppCourse/substring.s
 
 # target to generate assembly for a file
-Yandex_trainings_3.0/ContestBackend_stupid_solve.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CppFiles.dir\build.make CMakeFiles/CppFiles.dir/Yandex_trainings_3.0/ContestBackend_stupid_solve.cpp.s
-.PHONY : Yandex_trainings_3.0/ContestBackend_stupid_solve.cpp.s
+CppCourse/substring.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CppFiles.dir\build.make CMakeFiles/CppFiles.dir/CppCourse/substring.cpp.s
+.PHONY : CppCourse/substring.cpp.s
 
 # Help Target
 help:
@@ -161,9 +161,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... CppFiles
-	@echo ... Yandex_trainings_3.0/ContestBackend_stupid_solve.obj
-	@echo ... Yandex_trainings_3.0/ContestBackend_stupid_solve.i
-	@echo ... Yandex_trainings_3.0/ContestBackend_stupid_solve.s
+	@echo ... CppCourse/substring.obj
+	@echo ... CppCourse/substring.i
+	@echo ... CppCourse/substring.s
 .PHONY : help
 
 

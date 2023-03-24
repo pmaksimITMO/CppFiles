@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Dns56/CLionProjects/CppFiles/CppCourse/substring.cpp
+cstdio
+-
+cstdlib
+-
+cstring
+-
+array
+-
+
