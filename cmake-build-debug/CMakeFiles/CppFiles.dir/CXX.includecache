@@ -6,13 +6,9 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Dns56/CLionProjects/CppFiles/CppCourse/substring.cpp
-cstdio
+C:/Users/Dns56/CLionProjects/CppFiles/DMlabs/Test2.cpp
+bits/stdc++.h
 -
-cstdlib
--
-cstring
--
-array
+cassert
 -
 

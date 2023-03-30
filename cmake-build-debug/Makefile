@@ -128,29 +128,29 @@ CppFiles/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CppFiles.dir\build.make CMakeFiles/CppFiles.dir/build
 .PHONY : CppFiles/fast
 
-CppCourse/substring.obj: CppCourse/substring.cpp.obj
-.PHONY : CppCourse/substring.obj
+DMlabs/Test2.obj: DMlabs/Test2.cpp.obj
+.PHONY : DMlabs/Test2.obj
 
 # target to build an object file
-CppCourse/substring.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CppFiles.dir\build.make CMakeFiles/CppFiles.dir/CppCourse/substring.cpp.obj
-.PHONY : CppCourse/substring.cpp.obj
+DMlabs/Test2.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CppFiles.dir\build.make CMakeFiles/CppFiles.dir/DMlabs/Test2.cpp.obj
+.PHONY : DMlabs/Test2.cpp.obj
 
-CppCourse/substring.i: CppCourse/substring.cpp.i
-.PHONY : CppCourse/substring.i
+DMlabs/Test2.i: DMlabs/Test2.cpp.i
+.PHONY : DMlabs/Test2.i
 
 # target to preprocess a source file
-CppCourse/substring.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CppFiles.dir\build.make CMakeFiles/CppFiles.dir/CppCourse/substring.cpp.i
-.PHONY : CppCourse/substring.cpp.i
+DMlabs/Test2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CppFiles.dir\build.make CMakeFiles/CppFiles.dir/DMlabs/Test2.cpp.i
+.PHONY : DMlabs/Test2.cpp.i
 
-CppCourse/substring.s: CppCourse/substring.cpp.s
-.PHONY : CppCourse/substring.s
+DMlabs/Test2.s: DMlabs/Test2.cpp.s
+.PHONY : DMlabs/Test2.s
 
 # target to generate assembly for a file
-CppCourse/substring.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CppFiles.dir\build.make CMakeFiles/CppFiles.dir/CppCourse/substring.cpp.s
-.PHONY : CppCourse/substring.cpp.s
+DMlabs/Test2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CppFiles.dir\build.make CMakeFiles/CppFiles.dir/DMlabs/Test2.cpp.s
+.PHONY : DMlabs/Test2.cpp.s
 
 # Help Target
 help:
@@ -161,9 +161,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... CppFiles
-	@echo ... CppCourse/substring.obj
-	@echo ... CppCourse/substring.i
-	@echo ... CppCourse/substring.s
+	@echo ... DMlabs/Test2.obj
+	@echo ... DMlabs/Test2.i
+	@echo ... DMlabs/Test2.s
 .PHONY : help
 
 

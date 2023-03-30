@@ -65,28 +65,28 @@ include CMakeFiles/CppFiles.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/CppFiles.dir/flags.make
 
-CMakeFiles/CppFiles.dir/CppCourse/substring.cpp.obj: CMakeFiles/CppFiles.dir/flags.make
-CMakeFiles/CppFiles.dir/CppCourse/substring.cpp.obj: CMakeFiles/CppFiles.dir/includes_CXX.rsp
-CMakeFiles/CppFiles.dir/CppCourse/substring.cpp.obj: ../CppCourse/substring.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dns56\CLionProjects\CppFiles\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CppFiles.dir/CppCourse/substring.cpp.obj"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CppFiles.dir\CppCourse\substring.cpp.obj -c C:\Users\Dns56\CLionProjects\CppFiles\CppCourse\substring.cpp
+CMakeFiles/CppFiles.dir/DMlabs/Test2.cpp.obj: CMakeFiles/CppFiles.dir/flags.make
+CMakeFiles/CppFiles.dir/DMlabs/Test2.cpp.obj: CMakeFiles/CppFiles.dir/includes_CXX.rsp
+CMakeFiles/CppFiles.dir/DMlabs/Test2.cpp.obj: ../DMlabs/Test2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Dns56\CLionProjects\CppFiles\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CppFiles.dir/DMlabs/Test2.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CppFiles.dir\DMlabs\Test2.cpp.obj -c C:\Users\Dns56\CLionProjects\CppFiles\DMlabs\Test2.cpp
 
-CMakeFiles/CppFiles.dir/CppCourse/substring.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CppFiles.dir/CppCourse/substring.cpp.i"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Dns56\CLionProjects\CppFiles\CppCourse\substring.cpp > CMakeFiles\CppFiles.dir\CppCourse\substring.cpp.i
+CMakeFiles/CppFiles.dir/DMlabs/Test2.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CppFiles.dir/DMlabs/Test2.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Dns56\CLionProjects\CppFiles\DMlabs\Test2.cpp > CMakeFiles\CppFiles.dir\DMlabs\Test2.cpp.i
 
-CMakeFiles/CppFiles.dir/CppCourse/substring.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CppFiles.dir/CppCourse/substring.cpp.s"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Dns56\CLionProjects\CppFiles\CppCourse\substring.cpp -o CMakeFiles\CppFiles.dir\CppCourse\substring.cpp.s
+CMakeFiles/CppFiles.dir/DMlabs/Test2.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CppFiles.dir/DMlabs/Test2.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Dns56\CLionProjects\CppFiles\DMlabs\Test2.cpp -o CMakeFiles\CppFiles.dir\DMlabs\Test2.cpp.s
 
 # Object files for target CppFiles
 CppFiles_OBJECTS = \
-"CMakeFiles/CppFiles.dir/CppCourse/substring.cpp.obj"
+"CMakeFiles/CppFiles.dir/DMlabs/Test2.cpp.obj"
 
 # External object files for target CppFiles
 CppFiles_EXTERNAL_OBJECTS =
 
-CppFiles.exe: CMakeFiles/CppFiles.dir/CppCourse/substring.cpp.obj
+CppFiles.exe: CMakeFiles/CppFiles.dir/DMlabs/Test2.cpp.obj
 CppFiles.exe: CMakeFiles/CppFiles.dir/build.make
 CppFiles.exe: CMakeFiles/CppFiles.dir/linklibs.rsp
 CppFiles.exe: CMakeFiles/CppFiles.dir/objects1.rsp

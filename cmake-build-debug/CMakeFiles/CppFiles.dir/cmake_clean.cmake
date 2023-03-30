@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/CppFiles.dir/CppCourse/substring.cpp.obj"
+  "CMakeFiles/CppFiles.dir/DMlabs/Test2.cpp.obj"
   "CppFiles.exe"
   "CppFiles.exe.manifest"
   "CppFiles.pdb"

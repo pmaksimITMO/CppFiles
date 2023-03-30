@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.20)
 project(CppFiles)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 14)
 #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -fopenmp")
 
 include_directories(.)
@@ -19,6 +19,6 @@ add_executable(CppFiles
 #        "Yandex trainings 3.0/ContestBackend_C.cpp"
 #        "Yandex trainings 3.0/ContestBackend_D.cpp"
 #        "Yandex trainings 3.0/ContestBackend_stupid_solve.cpp"
-#        DMlabs/Test2.cpp
-        CppCourse/substring.cpp
+        DMlabs/Test2.cpp
+#        CppCourse/substring.cpp
         )

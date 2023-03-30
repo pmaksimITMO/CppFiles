@@ -82,7 +82,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Dns56/CLionProjects/CppFiles/CppCourse/substring.cpp">
+		<Unit filename="C:/Users/Dns56/CLionProjects/CppFiles/DMlabs/Test2.cpp">
 			<Option target="CppFiles"/>
 		</Unit>
 		<Unit filename="C:/Users/Dns56/CLionProjects/CppFiles/CMakeLists.txt">
