@@ -1,3 +1,0 @@
-C:/Users/Dns56/CLionProjects/CppFiles/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-C:/Users/Dns56/CLionProjects/CppFiles/cmake-build-debug/CMakeFiles/CppFiles.dir
-C:/Users/Dns56/CLionProjects/CppFiles/cmake-build-debug/CMakeFiles/edit_cache.dir
