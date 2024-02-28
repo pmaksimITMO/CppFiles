@@ -59,16 +59,49 @@ const ld PI = acosl(-1.0);
 #endif
 
 int main() {
-    IOS;
+//    IOS;
+    int n, d;
+    cin >> n >> d;
+    vc<pii> a(n);
+    vc<vi> g(n + 1);
+    forn(i, 0, n) {
+        int x, y; cin >> x >> y;
+        a[i] = {x, y};
+    }
+    a.pb({0, 0});
+    forn(i, 0, n + 1) {
+        forn(j, 0, n + 1) {
+            if (i == j || a[j].first - a[i].first > d || a[j].second - a[i].second > d) continue;
+            g[i].pb(j);
+        }
+    }
+    int s = n;
+    n = int(a.size());
+    vector<int> dist(n, INF),  p(n);
+    dist[s] = 0;
+    vector<char> used(n);
+    forn(i, 0, n) {
+        int v = -1;
+        forn(j, 0, n)
+            if (!used[j] && (v == -1 || dist[j] < dist[v]))
+                v = j;
+        if (dist[v] == INF)
+            break;
+        used[v] = true;
+        for(auto& u: g[v]) {
+            if (dist[v] + 1 < dist[u]) {
+                dist[u] = dist[v] + 1;
+                p[u] = v;
+            }
+        }
+    }
 
+    if (dist[0] == INF) cout << "-1";
+    else {
+        vector<int> path;
+        for (int v = 0; v != s; v = p[v]) path.pb(v);
+        reverse(all(path));
+        cout << path.size() << '\n';
+        for(auto& i : path) cout << i + 1 << ' ';
+    }
 }
-/*
- 8 5 15 12 -> 5 8 12 15
- 10 20 20 15 -> 10 15 20 20
-
- 4! - 3! - 3! = 24 - 6 - 6 = 12
-
- 10 15 20 20'
- 10 15 20' 20
-
-*/

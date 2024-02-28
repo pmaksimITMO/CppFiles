@@ -58,34 +58,22 @@ const ld PI = acosl(-1.0);
 #define MYASSERT(expr)
 #endif
 
-int main() {
-    IOS;
-    int n, m;
-    cin >> n >> m;
-    vi p(n);
-    cin >> p;
-    int w = m, ans = 0;
-    for(int i = 0; i < n;) {
-        if (w <= p[i]) {
-            p[i] -= w;
-            w = m;
-            if (p[i] == 0) i++;
-        } else {
-            if (w == m) ans += 2;
-            else ans++;
-            w -= p[i];
-            i++;
-        }
-    }
-    cout << ans;
+ll gcd(ll a, ll b) {
+    if (b == 0) return a;
+    return gcd(b, a % b);
 }
 
-/*
- 4 5 11 8 3 7 2
-
- sum = 40
-
- () () () () ()
-
- 2 + 2 + 2 + 2 + 1 + 2
- */
+int main() {
+    IOS;
+    int n;
+    ll m;
+    cin >> n >> m;
+    vll a(n); cin >> a;
+    ll g = a[0];
+    forn(i, 1, n) g = gcd(g, a[i]);
+    forn(i, 0, n) a[i] /= g;
+    ll s = accumulate(all(a), 0ll);
+    ll x = m / s;
+    forn(i, 0, n) a[i] *= x;
+    cout << a;
+}

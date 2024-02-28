@@ -11,8 +11,8 @@ add_executable(CppFiles
 #        "LOSH2021/heavy-light decomposition.cpp"
 #        "LOSH2021/suff-mas.cpp"
 #        "Yandex trainings 3.0/Beautiful_String.cpp"
-#        A&DS/SegTree/RMQ.cpp
-#        A&DS/SegTree/PermutationOnSeg.cpp
+#        ALGORITHMS/SegTree/RMQ.cpp
+#        ALGORITHMS/SegTree/PermutationOnSeg.cpp
 #        "Yandex trainings 3.0/ContestBackend_A.cpp"
 #        "Yandex trainings 3.0/ContestBackend_B.cpp"
 #        "Yandex trainings 3.0/ContestBackend_C.cpp"
@@ -27,59 +27,73 @@ add_executable(CppFiles
 #        CppCourse/vector/test.cpp CppCourse/vector/vector.h
 #        DMlabs/dm_lab_avt.cpp
 #        CppCourse/bigint/big_integer.h CppCourse/bigint/big_integer.cpp
-#        A&DS/lca/min-cost-lca.cpp
-#        A&DS/lca/simple-lca.cpp A&DS/sparse-table/simple-sparse-table.cpp
-#        A&DS/SegTree/mass-operations.cpp
-#        A&DS/treap/treap-reverse.cpp
-#        A&DS/treap/treap-kth-max.cpp
-#        A&DS/treap/Swapper.cpp
-#        A&DS/SegTree/RMQ_reverse.cpp
-#        A&DS/SegTree/SegTree_2D.cpp
-#        A&DS/SegTree/Fenwick.cpp
-#        A&DS/dfs_mst/A.top_sort.cpp
-#        A&DS/dfs_mst/B_bridges.cpp
-#        A&DS/dfs_mst/C_articulation_points.cpp
-#        A&DS/dfs_mst/D_edge_connectivity.cpp
-#        A&DS/dfs_mst/E_point_connectivity.cpp
-#        A&DS/dfs_mst/F_condensation.cpp
-#        A&DS/dfs_mst/H_avia.cpp
-#        A&DS/dfs_mst/I_MST_PRIM.cpp
-#        A&DS/dfs_mst/J_MST_Kraskal.cpp
-#        A&DS/dfs_mst/G_2SAT.cpp
-#        A&DS/shortestPaths_gamesTheory/A_Floyd.cpp
-#        A&DS/shortestPaths_gamesTheory/B_Deikstra.cpp
-#        A&DS/shortestPaths_gamesTheory/C_NegCycle.cpp
-#        A&DS/shortestPaths_gamesTheory/D_K_length_paths.cpp
-#        A&DS/shortestPaths_gamesTheory/E_Ford_Bellman.cpp
-#        A&DS/shortestPaths_gamesTheory/F_lost_kefir.cpp
+#        ALGORITHMS/lca/min-cost-lca.cpp
+#        ALGORITHMS/lca/simple-lca.cpp ALGORITHMS/sparse-table/simple-sparse-table.cpp
+#        ALGORITHMS/SegTree/mass-operations.cpp
+#        ALGORITHMS/treap/treap-reverse.cpp
+#        ALGORITHMS/treap/treap-kth-max.cpp
+#        ALGORITHMS/treap/Swapper.cpp
+#        ALGORITHMS/SegTree/RMQ_reverse.cpp
+#        ALGORITHMS/SegTree/SegTree_2D.cpp
+#        ALGORITHMS/SegTree/Fenwick.cpp
+#        ALGORITHMS/dfs_mst/A.top_sort.cpp
+#        ALGORITHMS/dfs_mst/B_bridges.cpp
+#        ALGORITHMS/dfs_mst/C_articulation_points.cpp
+#        ALGORITHMS/dfs_mst/D_edge_connectivity.cpp
+#        ALGORITHMS/dfs_mst/E_point_connectivity.cpp
+#        ALGORITHMS/dfs_mst/F_condensation.cpp
+#        ALGORITHMS/dfs_mst/H_avia.cpp
+#        ALGORITHMS/dfs_mst/I_MST_PRIM.cpp
+#        ALGORITHMS/dfs_mst/J_MST_Kraskal.cpp
+#        ALGORITHMS/dfs_mst/G_2SAT.cpp
+#        ALGORITHMS/shortestPaths_gamesTheory/A_Floyd.cpp
+#        ALGORITHMS/shortestPaths_gamesTheory/B_Deikstra.cpp
+#        ALGORITHMS/shortestPaths_gamesTheory/C_NegCycle.cpp
+#        ALGORITHMS/shortestPaths_gamesTheory/D_K_length_paths.cpp
+#        ALGORITHMS/shortestPaths_gamesTheory/E_Ford_Bellman.cpp
+#        ALGORITHMS/shortestPaths_gamesTheory/F_lost_kefir.cpp
 #        DMlabs/2sem/A_gamil_cycle.cpp
 #        DMlabs/2sem/B_gamil_cycle2.cpp
 #        DMlabs/2sem/E_prufer_code.cpp
 #        DMlabs/2sem/F_repair_tree_using_prufer_code.cpp
 #        DMlabs/2sem/C_interactive.cpp
 #        DMlabs/2sem/D_tournir_gamil_cycle.cpp
-#        A&DS/shortestPaths_gamesTheory/H_easy_game.cpp
-#        A&DS/shortestPaths_gamesTheory/I_retroanalyz.cpp
-#        A&DS/shortestPaths_gamesTheory/J_Grandy_function.cpp
-#        A&DS/shortestPaths_gamesTheory/K_drovosek.cpp
+#        ALGORITHMS/shortestPaths_gamesTheory/H_easy_game.cpp
+#        ALGORITHMS/shortestPaths_gamesTheory/I_retroanalyz.cpp
+#        ALGORITHMS/shortestPaths_gamesTheory/J_Grandy_function.cpp
+#        ALGORITHMS/shortestPaths_gamesTheory/K_drovosek.cpp
 #        DMlabs/3sem/test_graphs.cpp
 #        DMlabs/3sem/Matroids/A.cpp
 #        DMlabs/3sem/Matroids/B.cpp
 #        DMlabs/3sem/Matroids/C.cpp
 #        DMlabs/3sem/Matroids/D.cpp
 #        DMlabs/3sem/Matroids/E.cpp
-        DMlabs/3sem/Matroids/F.cpp
-#        A&DS/Strings/Substrings_equals.cpp
-#        A&DS/Strings/Prefix_function.cpp
-#        A&DS/Strings/Z_function.cpp
-#        A&DS/Strings/All_Meetings_Substring.cpp
-#        A&DS/Strings/Period.cpp
-#        A&DS/Strings/Maximum_common_substring.cpp
-#        A&DS/Strings/Axo-Corasic.cpp
-#        A&DS/Strings/SufMass.cpp
-#        A&DS/Strings/SufMass_Cnt_Diff_Substrings.cpp
-#        A&DS/Strings/SufMass_kth_cycle_shift.cpp
-#        A&DS/Strings/SufMass_common_substring_2_strings.cpp
-#        A&DS/Strings/SufMass_Multiple_Search.cpp
-#        A&DS/Strings/Axo-Corasic_first_last_meet.cpp
+#        DMlabs/3sem/Matroids/F.cpp
+#        ALGORITHMS/Strings/Substrings_equals.cpp
+#        ALGORITHMS/Strings/Prefix_function.cpp
+#        ALGORITHMS/Strings/Z_function.cpp
+#        ALGORITHMS/Strings/All_Meetings_Substring.cpp
+#        ALGORITHMS/Strings/Period.cpp
+#        ALGORITHMS/Strings/Maximum_common_substring.cpp
+#        ALGORITHMS/Strings/Axo-Corasic.cpp
+#        ALGORITHMS/Strings/SufMass.cpp
+#        ALGORITHMS/Strings/SufMass_Cnt_Diff_Substrings.cpp
+#        ALGORITHMS/Strings/SufMass_kth_cycle_shift.cpp
+#        ALGORITHMS/Strings/SufMass_common_substring_2_strings.cpp
+#        ALGORITHMS/Strings/SufMass_Multiple_Search.cpp
+#        ALGORITHMS/Strings/Axo-Corasic_first_last_meet.cpp
+#        ITMO_ICPC/IntroContest/A.cpp
+#        ITMO_ICPC/IntroContest/B.cpp
+#        ITMO_ICPC/IntroContest/C.cpp
+#        ITMO_ICPC/IntroContest/D.cpp
+#        ITMO_ICPC/IntroContest/F.cpp
+#        ITMO_ICPC/IntroContest/G.cpp
+#        ITMO_ICPC/IntroContest/I.cpp
+#        ALGORITHMS/parsoch/parsoch.cpp
+#        ALGORITHMS/parsoch/birthday.cpp
+#        ALGORITHMS/parsoch/nlo.cpp
+        ALGORITHMS/parsoch/max_parsoch.cpp
+#        ALGORITHMS/parsoch/domino.cpp
+#        ALGORITHMS/parsoch/segments.cpp
+#        ALGORITHMS/parsoch/dragons.cpp
         )

@@ -79,34 +79,41 @@ bool try_kuhn(int v) {
     return false;
 }
 
-static void try_add(const int& v, const int& u) {
-    used[v] = true;
-    if (mt[u] == -1 || (!used[mt[u]] && try_kuhn(mt[u]))) {
-        mt[u] = v;
-        return;
-    }
-}
-
 int main() {
-//    IOS;
-    int n, m, e;
-    cin >> n >> m >> e;
-    vc<pii> inp(e);
-    vi wl(n, 0), wr(m, 0);
-    cin >> wl >> wr;
-    g.resize(n);
-    forn(i, 0, e) {
-        int x, y; cin >> x >> y;
-        inp[i] = {x - 1, y - 1};
-        g[x - 1].pb(y - 1);
+    IOS;
+    int n, m, a, b;
+    cin >> n >> m >> a >> b;
+    vc<string> inp(n);
+    cin >> inp;
+    g.resize(n * m);
+    int empty = 0;
+    forn(i, 0, n) {
+        forn(j, 0, m) {
+            if (inp[i][j] == '.') continue;
+            empty++;
+            if ((i + j) % 2) continue;
+            int cur = i * m + j;
+            if (j > 0 && inp[i][j - 1] == '*') g[cur].pb(cur - 1);
+            if (j < m - 1 && inp[i][j + 1] == '*') g[cur].pb(cur + 1);
+            if (i > 0 && inp[i - 1][j] == '*') g[cur].pb(cur - m);
+            if (i < n - 1 && inp[i + 1][j] == '*') g[cur].pb(cur + m);
+        }
     }
-    sort(all(inp), [wl, wr](pii l, pii r) -> bool {
-       return wl[l.first] + wr[l.second] > wl[r.first] + wr[r.second];
-    });
-    mt.assign(m, -1);
-    forn(i, 0, e) {
-        used.assign(n, false);
-        try_add(inp[i].first, inp[i].second);
-        cout << mt << '\n';
+    if (2 * b <= a) {
+        cout << b * empty;
+        return 0;
     }
+    mt.assign(n * m, -1);
+    forn(i, 0, n) {
+        forn(j, 0, m) {
+            if ((i + j) % 2) continue;
+            used.assign(n * m, false);
+            try_kuhn(i * m + j);
+        }
+    }
+    int c = 0;
+    forn(i, 0, n * m) {
+        if (mt[i] != -1) c++;
+    }
+    cout << c * a + (empty - 2 * c) * b;
 }

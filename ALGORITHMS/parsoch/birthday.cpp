@@ -58,11 +58,11 @@ const ld PI = acosl(-1.0);
 #define MYASSERT(expr)
 #endif
 
-vc<bool> used;
-vi mt;
-matrix g;
+vc<bool> used, us;
+vll mt;
+vc<set<ll>> g, r;
 
-bool try_kuhn(int v) {
+bool try_kuhn(ll v) {
     used[v] = true;
     for (auto const& u : g[v]) {
         if (mt[u] == -1) {
@@ -79,28 +79,66 @@ bool try_kuhn(int v) {
     return false;
 }
 
-int main() {
-    IOS;
+void dfs(ll v) {
+    us[v] = true;
+    for(auto const& u: r[v]) {
+        if (!us[u]) dfs(u);
+    }
+}
+
+void solve() {
     int n, m;
-    cin >> n >> m;
-    g.resize(n);
-    mt.assign(m, -1);
-    used.assign(n, false);
-    forn(i, 0, n) {
-        int x = -1;
-        while (x != 0) {
-            cin >> x;
-            if (x != 0) g[i].pb(x - 1);
+    cin >> m >> n;
+    used.assign(m, false);
+    mt.assign(n, -1);
+    g.resize(m);
+    set<ll> q;
+    forn(i, 0, n) q.insert(i);
+    forn(i, 0, m) {
+        ll u = -1;
+        g[i] = q;
+        while (cin >> u) {
+            if (u == 0) break;
+            g[i].erase(u - 1);
         }
     }
-    forn(i, 0, n) {
-        used.assign(n, false);
+    forn(i, 0, m) {
+        used.assign(m, false);
         try_kuhn(i);
     }
-    vc<pii> ans;
-    forn(i, 0, m) {
-        if (mt[i] != -1) ans.pb({mt[i] + 1, i + 1});
+    r.clear();
+    r.resize(n + m);
+    used.assign(n, false);
+    us.assign(n + m, false);
+    forn(i, 0, mt.size()) {
+        if (mt[i] != -1) {
+            used[mt[i]] = true;
+            r[i + m].insert(mt[i]);
+        }
     }
-    cout << ans.size() << '\n';
-    for(auto const& i : ans) cout << i.first << ' ' << i.second << '\n';
+    forn(i, 0, m) {
+        for (auto k: g[i]) {
+            if (r[k + m].find(i) == r[k + m].end()) {
+                r[i].insert(k + m);
+            }
+        }
+    }
+    forn(i, 0, m) if (!used[i]) dfs(i);
+    vector <int> am, ag;
+    ll ans = 0, cnt = 0;
+    forn(i, 0, m)
+        if (us[i] == 1)
+            am.push_back(i + 1), cnt++;
+    forn(i, m, m + n)
+        if (us[i] == 0)
+            ag.push_back(i + 1 -  m), ans++;
+    cout << ans + cnt << "\n" << cnt << " " << ans << "\n";
+    cout << am << '\n' << ag << '\n';
+}
+
+int main() {
+    IOS;
+    int t = 1;
+    cin >> t;
+    while (t--) solve();
 }

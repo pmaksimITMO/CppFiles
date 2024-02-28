@@ -59,65 +59,29 @@ const ld PI = acosl(-1.0);
 #endif
 
 int main() {
-//    IOS;
-    int n, d;
-    cin >> n >> d;
-    vc<pii> a(n);
-    vc<vi> g(n + 1);
-    forn(i, 0, n) {
-        int x, y; cin >> x >> y;
-        a[i] = {x, y};
-    }
-    a.pb({0, 0});
-    forn(i, 0, n + 1) {
-        forn(j, 0, n + 1) {
-            if (i == j || a[j].first - a[i].first > d || a[j].second - a[i].second > d) continue;
-            g[i].pb(j);
+    ll n, k, m, t;
+    cin >> n >> k >> m >> t;
+    ll cur = 0, x = 0;
+    bool act = false;
+    for(int i = 1; i < n * k + 1;) {
+        cout << i << ' ' << cur << ' ';
+        if (i % k == 0) {
+            cur += m;
         }
-    }
-    int s = n;
-    n = int(a.size());
-    vector<int> dist(n, INF),  p(n);
-    dist[s] = 0;
-    vector<char> used(n);
-    forn(i, 0, n) {
-        int v = -1;
-        forn(j, 0, n)
-            if (!used[j] && (v == -1 || dist[j] < dist[v]))
-                v = j;
-        if (dist[v] == INF)
-            break;
-        used[v] = true;
-        for(auto& u: g[v]) {
-            if (dist[v] + 1 < dist[u]) {
-                dist[u] = dist[v] + 1;
-                p[u] = v;
-            }
+        if (act) {
+            cur--;
+            x--;
+            i++;
+            if (x == 0) act = false;
+        } else if (cur >= t) {
+            act = true;
+            x = t;
+            cur--, x--, i++;
+            if (x == 0) act = false;
+        } else {
+            i++;
         }
+        cout << cur << '\n';
     }
-
-    if (dist[0] == INF) cout << "-1";
-    else {
-        vector<int> path;
-        for (int v = 0; v != s; v = p[v]) path.pb(v);
-        reverse(all(path));
-        cout << path.size() << '\n';
-        for(auto& i : path) cout << i + 1 << ' ';
-    }
+    cout << n * k + cur;
 }
-
-
-// 4 8 10 6
-/*
- (tart, time)
- (0, 0)
- (10, 8)                +
- (4, 14)
- (4, 16) -> (14, 16)    +
- (8, 22)
- (6, 24) -> (16, 24)    +
- (10, 30)
- (8, 32) -> (18, 32)    +
-
- 32 + 18 = 48
- */

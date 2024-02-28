@@ -58,54 +58,34 @@ const ld PI = acosl(-1.0);
 #define MYASSERT(expr)
 #endif
 
-struct pt {
-    int x, type;
-    pt(int x_, int type_): x(x_), type(type_) {}
-};
-
 int main() {
     IOS;
-    int n;
-    cin >> n;
-    vc<pt> a;
-    vc<pii> inp(n);
-    forn(i, 0, n) {
-        int s; cin >> s;
-        inp[i].first = s;
-        a.pb(pt(s + 1, 0));
-    }
-    forn(i, 0, n) {
-        int g; cin >> g;
-        inp[i].second = g;
-        a.pb(pt(g - 1, 1));
-    }
-    sort(all(a), [](pt l, pt r) -> bool {
-        if (l.x == r.x) return l.type < r.type;
-        return l.x < r.x;
-    });
-    int cnt = 0;
-    int ans = -1, ans_cnt = 0;
-    forn(i, 0, 2 * n) {
-        if (a[i].type == 0) {
-            cnt++;
+    int n, m;
+    cin >> n >> m;
+    vi p(n);
+    cin >> p;
+    int w = m, ans = 0;
+    for(int i = 0; i < n;) {
+        if (w <= p[i]) {
+            p[i] -= w;
+            w = m;
+            if (p[i] == 0) i++;
         } else {
-            cnt--;
-        }
-        if (cnt > ans_cnt) {
-            ans_cnt = cnt;
-            ans = a[i].x;
+            if (w == m) ans += 2;
+            else ans++;
+            w -= p[i];
+            i++;
         }
     }
-    cout << ans_cnt << ' ' << ans << '\n';
-    forn(j, 0, n) if (inp[j].first < ans && ans < inp[j].second) cout << j + 1 << ' ';
+    cout << ans;
 }
 
 /*
- [5,6]
- [2,12]
- [0,8]
- [10,11]
- [6,10]
- [8,10]
- [3,7]
+ 4 5 11 8 3 7 2
+
+ sum = 40
+
+ () () () () ()
+
+ 2 + 2 + 2 + 2 + 1 + 2
  */

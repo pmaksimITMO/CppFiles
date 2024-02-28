@@ -59,43 +59,48 @@ const ld PI = acosl(-1.0);
 #endif
 
 int main() {
-    ll n, k, m, t;
-    cin >> n >> k >> m >> t;
-    ll cur = 0, last = 0;
+    IOS;
+    int n; cin >> n;
+    vi freq(2 * n, 0);
     forn(i, 0, n) {
-//        cout << cur << ' ' << last << ' ' << i << '\n';
-        if (cur >= t) {
-            cur -= last;
-            ll r = (cur / t) * t;
-            if (r <= k - last) {
-                cur -= r;
-                last = 0;
-            } else {
-                cur -= (k - last);
-                last = k - (k / t) * t;
-            }
-        }
-        cur += m;
+        int x; cin >> x;
+        freq[x - 1]++;
+    } // [1 1 2 3] -> [2, 1, 1, 0, 0, 0, 0, 0]
+    forn(i, n, 2 * n) freq[i] = freq[i - n];
+    vi pref(2 * n, 0), sum(n, 0);
+    pref[0] = freq[0];
+    sum[0] = freq[0];
+    forn(i, 1, 2 * n) {
+        pref[i] = pref[i - 1] + freq[i];
+        if (i < n) sum[i] = sum[i - 1] + freq[i] * (i + 1);
     }
-    cout << n * k + cur;
+    int q; cin >> q;
+    int st = 1;
+    while (q--) {
+        int t, z; cin >> t >> z;
+        if (t == 1) {
+            st += z;
+            if (st > n) st = n - st;
+        } else {
+            int l = 0, r = n;
+            auto ok = [pref, st, z](int m) -> bool {
+                int cnt = pref[m] - (st == 1 ? 0 : pref[st - 2]);
+                return cnt >= z;
+            };
+            while (r - l > 0) {
+                int m = l + (r - l) / 2;
+                if (ok(m)) r = m;
+                else l = m;
+            }
+            if (ok(l)) {
+                l--;
+            }
+            int cnt = z - ((l == -1 ? 0 : pref[l]) - (st == 1 ? 0 : pref[st - 2]));
+            int ans = 0;
+            int ll = 0, rr = l - st;
+        }
+    }
 }
-
-
-// 4 8 10 6
-/*
- (tart, time)
- (0, 0)
- (10, 8)                +
- (4, 14)
- (4, 16) -> (14, 16)    +
- (8, 22)
- (6, 24) -> (16, 24)    +
- (10, 30)
- (8, 32) -> (18, 32)    +
-
- 32 + 18 = 48
- */
-
 /*
  4
 1 1 2 3

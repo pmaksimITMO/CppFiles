@@ -58,21 +58,28 @@ const ld PI = acosl(-1.0);
 #define MYASSERT(expr)
 #endif
 
+struct seg {
+    int x_l, x_r, y_l, y_r;
+
+    seg() : x_l(0), x_r(0), y_l(0), y_r(0) {}
+
+    seg(int x1, int y1, int x2, int y2) : x_l(x1), x_r(x2), y_l(y1), y_r(y2) {}
+};
+
 vc<bool> used;
-vi mt;
+vi mt, par;
+vc<seg> hor, vert;
+
 matrix g;
 
 bool try_kuhn(int v) {
+    if (used[v]) return false;
     used[v] = true;
-    for (auto const& u : g[v]) {
-        if (mt[u] == -1) {
-            mt[u] = v;
-            return true;
-        }
-    }
-    for (auto const& u : g[v]) {
-        if (!used[mt[u]] && try_kuhn(mt[u])) {
-            mt[u] = v;
+    forn(i, 0, vert.size()) {
+        if (g[v][i] == 1) continue;
+        if (mt[i] == -1 || try_kuhn(mt[i])) {
+            mt[i] = v;
+            par[v] = 1;
             return true;
         }
     }
@@ -81,39 +88,45 @@ bool try_kuhn(int v) {
 
 int main() {
     IOS;
-    int n, m, a, b;
-    cin >> n >> m >> a >> b;
-    vc<string> inp(n);
-    cin >> inp;
-    g.resize(n * m);
-    int empty = 0;
+    int n;
+    cin >> n;
     forn(i, 0, n) {
-        forn(j, 0, m) {
-            if (inp[i][j] == '.') continue;
-            empty++;
-            if ((i + j) % 2) continue;
-            int cur = i * m + j;
-            if (j > 0 && inp[i][j - 1] == '*') g[cur].pb(cur - 1);
-            if (j < m - 1 && inp[i][j + 1] == '*') g[cur].pb(cur + 1);
-            if (i > 0 && inp[i - 1][j] == '*') g[cur].pb(cur - m);
-            if (i < n - 1 && inp[i + 1][j] == '*') g[cur].pb(cur + m);
+        int x1, y1, x2, y2;
+        cin >> x1 >> y1 >> x2 >> y2;
+        if (x1 == x2) vert.pb(seg(x1, y1, x2, y2));
+        else hor.pb(seg(x1, y1, x2, y2));
+    }
+    g.assign(hor.size(), vi(vert.size(), 0));
+    auto intersect = [](seg x, seg y) -> bool {
+        //x - hor, y - vert
+        if (x.x_l <= y.x_l && y.x_l <= x.x_r && y.y_l <= x.y_l && x.y_l <= y.y_r) {
+            return true;
+        }
+        return false;
+    };
+    forn(i, 0, hor.size()) {
+        forn(j, 0, vert.size()) {
+            if (!intersect(hor[i], vert[j])) {
+                g[i][j] = 1;
+            }
         }
     }
-    if (2 * b <= a) {
-        cout << b * empty;
-        return 0;
-    }
-    mt.assign(n * m, -1);
-    forn(i, 0, n) {
-        forn(j, 0, m) {
-            if ((i + j) % 2) continue;
-            used.assign(n * m, false);
-            try_kuhn(i * m + j);
+    mt.assign(vert.size(), -1);
+    par.assign(hor.size(), -1);
+    for (int run = 1; run;) {
+        run = 0;
+        used.assign(hor.size(), false);
+        forn(i, 0, hor.size()) {
+            if (par[i] == -1 && try_kuhn(i)) run = 1;
         }
     }
-    int c = 0;
-    forn(i, 0, n * m) {
-        if (mt[i] != -1) c++;
+    int cnt = 0;
+    for (auto const &i: mt) {
+        if (i != -1) {
+            cnt++;
+        }
     }
-    cout << c * a + (empty - 2 * c) * b;
+//    forn(i, 0, hor.size()) cout << g[i] << '\n';
+//    cout << "-----------\n" << mt << "\n-----------------\n";
+    cout << n - cnt;
 }

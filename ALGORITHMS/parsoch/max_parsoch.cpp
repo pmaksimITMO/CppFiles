@@ -81,26 +81,79 @@ bool try_kuhn(int v) {
 
 int main() {
     IOS;
-    int n, m;
-    cin >> n >> m;
-    g.resize(n);
-    mt.assign(m, -1);
-    used.assign(n, false);
+    int n, m, e;
+    cin >> n >> m >> e;
+    vc<pii> wl(n), wr(m);
     forn(i, 0, n) {
-        int x = -1;
-        while (x != 0) {
-            cin >> x;
-            if (x != 0) g[i].pb(x - 1);
+        int v; cin >> v;
+        wl[i] = {v, i};
+    }
+    forn(i, 0, m) {
+        int v; cin >> v;
+        wr[i] = {v, i};
+    }
+    matrix g_0(n), g_r(m);
+    map<pii, int> edge_to_id;
+    vc<pii> in(e);
+    forn(i, 0, e) {
+        int x, y; cin >> x >> y;
+        g_0[x - 1].pb(y - 1);
+        g_r[y - 1].pb(x - 1);
+        in[i] = {x - 1, y - 1};
+        edge_to_id[{x - 1, y - 1}] = i + 1;
+    }
+    vi L, R;
+    {
+        g = g_0;
+        sort(rall(wl));
+        mt.assign(m, -1);
+        forn(i, 0, n) {
+            used.assign(n, false);
+            try_kuhn(wl[i].second);
+        }
+        forn(i, 0, m) if (mt[i] != -1) L.pb(mt[i]);
+    }
+    {
+        g = g_r;
+        sort(rall(wr));
+        mt.assign(n, -1);
+        forn(i, 0, m) {
+            used.assign(m, false);
+            try_kuhn(wr[i].second);
+        }
+        forn(i, 0, n) if (mt[i] != -1) R.pb(mt[i]);
+    }
+    sort(all(L));
+    sort(all(R));
+    g.clear();
+    g.resize(n);
+    for(auto const& cur: in) {
+        if (binary_search(all(L), cur.first) && binary_search(all(R), cur.second)) {
+            g[cur.first].pb(cur.second);
         }
     }
-    forn(i, 0, n) {
+    mt.assign(m, -1);
+    forn(i, 0, L.size()) {
         used.assign(n, false);
-        try_kuhn(i);
+        try_kuhn(L[i]);
     }
-    vc<pii> ans;
+
+    ll ans = 0;
+    for(auto const &i : L) {
+        for(auto const &j : wl) {
+            if (j.second == i) ans += j.first;
+        }
+    }
+    for(auto const &i : R) {
+        for(auto const &j : wr) {
+            if (j.second == i) ans += j.first;
+        }
+    }
+    vi res_mt;
     forn(i, 0, m) {
-        if (mt[i] != -1) ans.pb({mt[i] + 1, i + 1});
+        if (mt[i] == -1) continue;
+        res_mt.pb(edge_to_id[{mt[i], i}]);
     }
-    cout << ans.size() << '\n';
-    for(auto const& i : ans) cout << i.first << ' ' << i.second << '\n';
+
+    cout << ans << '\n' << res_mt.size() << '\n' << res_mt;
 }

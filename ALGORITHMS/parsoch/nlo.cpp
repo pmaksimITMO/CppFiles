@@ -64,13 +64,13 @@ matrix g;
 
 bool try_kuhn(int v) {
     used[v] = true;
-    for (auto const& u : g[v]) {
+    for (auto const &u: g[v]) {
         if (mt[u] == -1) {
             mt[u] = v;
             return true;
         }
     }
-    for (auto const& u : g[v]) {
+    for (auto const &u: g[v]) {
         if (!used[mt[u]] && try_kuhn(mt[u])) {
             mt[u] = v;
             return true;
@@ -79,28 +79,88 @@ bool try_kuhn(int v) {
     return false;
 }
 
+struct pt {
+    pll time;
+    ll x, y;
+    pt(): time({0,0}), x(0), y(0) {}
+};
+
+static ll dist_square(const pt &a, const pt &b) {
+    return (a.x - b.x) * (a.x - b.x) + (a.y - b.y) * (a.y - b.y);
+}
+
+static ll time_diff_minutes(const pt &a, const pt &b) {
+    return (b.time.first - a.time.first) * 60ll + (b.time.second - a.time.second);
+}
+
+static bool can_add_edge(const pt &a, const pt &b, const int& v) {
+    ll len = ll(dist_square(a, b));
+    ll t = ll(time_diff_minutes(a, b));
+    // [v = km/h], [t = min], [len = km], sqrt(len) = d
+    // v * t >= 60 * d
+    // (v*t)^2 >= 3600 * len
+    if (t * t * v * v >= 3600 * len) return true;
+    else return false;
+}
+
 int main() {
     IOS;
-    int n, m;
-    cin >> n >> m;
+    int n, v;
+    cin >> n >> v;
     g.resize(n);
-    mt.assign(m, -1);
-    used.assign(n, false);
+    vc<pt> a(n);
     forn(i, 0, n) {
-        int x = -1;
-        while (x != 0) {
-            cin >> x;
-            if (x != 0) g[i].pb(x - 1);
+        string t;
+        int x, y;
+        cin >> t >> x >> y;
+        a[i].time = {stoi(t.substr(0, 2)), stoi(t.substr(3, 5))};
+        a[i].x = x;
+        a[i].y = y;
+    }
+    sort(all(a), [](pt f, pt s) -> bool {
+        if (f.time.first == s.time.first) return f.time.second < s.time.second;
+        return f.time.first < s.time.first;
+    });
+    forn(i, 0, n) {
+        forn(j, i + 1, n) {
+            if (can_add_edge(a[i], a[j], v)) {
+                g[i].pb(j);
+            }
         }
     }
+    mt.assign(n, -1);
     forn(i, 0, n) {
         used.assign(n, false);
         try_kuhn(i);
     }
     vc<pii> ans;
-    forn(i, 0, m) {
+    forn(i, 0, n) {
         if (mt[i] != -1) ans.pb({mt[i] + 1, i + 1});
     }
-    cout << ans.size() << '\n';
-    for(auto const& i : ans) cout << i.first << ' ' << i.second << '\n';
+    int cnt = 0;
+    used.assign(n, false);
+    forn(i, 0, n) {
+        int tmp = i;
+        bool is_path = false;
+        while (!used[tmp]) {
+            is_path = true;
+            used[tmp] = true;
+            forn(j, 0, n)
+                if (mt[j] == tmp) {
+                    tmp = j;
+                    break;
+                }
+        }
+        if (is_path) cnt++;
+    }
+    cout << cnt;
 }
+
+/*
+ 1      1
+ 2      2
+ 3      3
+ 4      4
+
+ (1, 2), (1,4), (2,4), (3,4)
+ */
